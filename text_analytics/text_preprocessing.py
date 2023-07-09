@@ -13,6 +13,7 @@ from nltk.corpus import treebank
 from nltk.classify import NaiveBayesClassifier
 from nltk.tag.sequential import ClassifierBasedPOSTagger
 from nltk.stem import WordNetLemmatizer
+import numpy as np
 
 url='https://www.bbc.com/news/business-62390097'
 url='https://www.investing.com/magazine/these-are-the-worlds-youngest-billionaires-3/'
@@ -329,4 +330,29 @@ def extract_clean_text(handler_df, links_df, start=0, stop=1000):
         
         if handler_attr["name"] in content:
             links_df.at[inx, "content"] = content
+            
+            
+
+def normalize_text(source_df: pd.DataFrame, normalized_df: pd.DataFrame, start=0, stop=1000):
+    wnl = WordNetLemmatizer()
+    tagged_data = treebank.tagged_sents()
+    nb_tagger = ClassifierBasedPOSTagger(train=tagged_data, classifier_builder=NaiveBayesClassifier.train)
+    stopwords = nltk.corpus.stopwords.words('english')
     
+    for inx, row in source_df.iterrows():
+        if inx < start:
+            continue;
+            
+        if inx > stop:
+            break;
+        
+        
+        if type(row['content']) == str:
+            text = lemmatize_text(row['content'], nb_tagger, wnl)
+            text = remove_special_characters(text)
+            text = remove_functional_words(text, stopwords)
+            
+            data_row = [row['id'], row['source'], text]
+            normalized_df.loc[len(normalized_df)] = data_row
+            print(inx)
+        
