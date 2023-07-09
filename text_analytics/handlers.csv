@@ -2,10 +2,10 @@ handlers,name,followers,friends,tweets,content_tags
 Dailymirror_SL,Daily Mirror,588872,35,34677,h1 h2 h3 h4 p time title
 colombotelegrap,Colombo Telegraph,42406,2,1198,h1 h2 h3 h4 p time title
 NewsfirstSL,News 1st,525162,8,20932,h1 h2 h3 h4 time div
-theisland_lk,,261,0,8743,h1 h2 h3 h4 p time title
-NewsWireLK,,222255,2,39698,h1 h2 h3 h4 p time title
-adaderana,,533456,14,9114,h1 h2 h3 h4 p time title
-DailyNews_lk,,14858,93,4314,h1 h2 h3 h4 p time title
-TimesOnlineLK,,17092,7,2736,h1 h2 h3 h4 p time title
-FT_SriLanka,,80772,8,2857,h1 h2 h3 h4 p time title
+theisland_lk,The Island,261,0,4743,h1 h2 h3 h4 p time title
+NewsWireLK,NewsWire,222255,2,39698,h1 h2 h3 h4 p time title
+adaderana,Adaderana News,533456,14,9114,h1 h2 h3 h4 p time title
+DailyNews_lk,DailyNews,14858,93,4314,h1 h2 h3 h4 p time title
+TimesOnlineLK,The Sunday Times,17092,7,2736,h1 h2 h3 h4 p time title
+FT_SriLanka,Daily FT,80772,8,2857,h1 h2 h3 h4 p time title
 CeylonToday,Ceylon Today,62797,33,3972,h1 h2 h3 h4 p time title
